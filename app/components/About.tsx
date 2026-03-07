@@ -1,4 +1,4 @@
-export default function About() {
+export const About = () => {
   return (
     <section className='border-t border-white/10 px-6 py-24'>
       <div className='mx-auto grid max-w-5xl gap-10 md:grid-cols-2'>
@@ -34,4 +34,4 @@ export default function About() {
       </div>
     </section>
   );
-}
+};

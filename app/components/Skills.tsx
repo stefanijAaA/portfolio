@@ -1,6 +1,6 @@
 import { skills } from '../utils';
 
-export default function Skills() {
+export const Skills = () => {
   return (
     <section className='border-t border-white/10 px-6 py-24'>
       <div className='mx-auto max-w-5xl'>
@@ -25,4 +25,4 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+};
