@@ -4,12 +4,10 @@ import { useMemo, useState } from 'react';
 import { techStack } from '../utils/techStack';
 
 const activeTabStyles =
-  'border-violet-400/40 bg-violet-400/10 text-white shadow-[0_0_30px_rgba(139,92,246,0.20)]';
-
-const panelAccentStyles = 'border-violet-400/40 bg-violet-400/10';
+  'border-white/15 bg-white/8 text-white shadow-[0_8px_30px_rgba(0,0,0,0.18)]';
 
 const badgeAccent =
-  'hover:border-violet-400/40 hover:bg-violet-400/10 hover:text-white';
+  'hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.04)_100%)] hover:text-white hover:shadow-[0_14px_30px_rgba(0,0,0,0.30),0_0_20px_rgba(139,92,246,0.10)]';
 
 export const Skills = () => {
   const [activeKey, setActiveKey] =
@@ -46,7 +44,7 @@ export const Skills = () => {
                 key={group.key}
                 type='button'
                 onClick={() => setActiveKey(group.key)}
-                className={`rounded-full border px-5 py-3 text-sm font-medium transition duration-300 cursor-pointer ${
+                className={`cursor-pointer rounded-full border px-5 py-3 text-sm font-medium transition-all duration-300 ${
                   isActive
                     ? activeTabStyles
                     : 'border-white/10 bg-white/3 text-neutral-300 hover:border-white/20 hover:bg-white/5 hover:text-white'
@@ -58,14 +56,13 @@ export const Skills = () => {
           })}
         </div>
 
-        <div
-          className={`relative overflow-hidden rounded-4xl border border-white/10 bg-white/3 p-8 transition duration-500 sm:p-10 ${panelAccentStyles}`}
-        >
-          <div className='pointer-events-none absolute inset-0 bg-linear-to-br from-violet-500/10 via-transparent to-transparent' />
+        <div className='relative overflow-hidden rounded-4xl border border-white/10 bg-[#0a1020] p-8 transition-all duration-500 sm:p-10'>
+          <div className='pointer-events-none absolute inset-0 rounded-4xl bg-[linear-gradient(90deg,rgba(20,28,48,0.96)_0%,rgba(36,32,68,0.94)_50%,rgba(24,20,44,0.96)_100%)]' />
 
-          <div className='pointer-events-none absolute inset-0 opacity-40 blur-3xl bg-linear-to-r from-violet-500/10 via-transparent to-violet-500/10 animate-[pulse_8s_ease-in-out_infinite]' />
-
-          <div className='relative'>
+          <div
+            key={activeGroup.key}
+            className='relative animate-[fadeIn_0.6s_ease]'
+          >
             <div className='mb-8 flex items-center gap-3'>
               <span className='h-2.5 w-2.5 rounded-full bg-white/80' />
               <p className='text-sm uppercase tracking-[0.3em] text-neutral-300'>
@@ -77,7 +74,7 @@ export const Skills = () => {
               {activeGroup.items.map((item) => (
                 <span
                   key={`${activeGroup.key}-${item}`}
-                  className={`rounded-2xl border border-white/10 bg-black/20 px-6 py-4 text-base font-medium text-white transition duration-300 sm:px-7 sm:py-4 sm:text-lg ${badgeAccent}`}
+                  className={`rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.02)_100%)] px-6 py-4 text-base font-medium text-white transition-all duration-300 sm:px-7 sm:py-4 sm:text-lg ${badgeAccent}`}
                 >
                   {item}
                 </span>
