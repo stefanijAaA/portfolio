@@ -1,6 +1,5 @@
 import {
   Hero,
-  About,
   Skills,
   Projects,
   Experience,
@@ -15,10 +14,6 @@ export default function Home() {
       <Navbar />
 
       <Hero />
-
-      <Reveal>
-        <About />
-      </Reveal>
 
       <Reveal>
         <Skills />
