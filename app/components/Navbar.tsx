@@ -26,11 +26,11 @@ export const Navbar = () => {
 
         <div className='ml-auto flex items-center gap-5 2xl:gap-7'>
           <a
-            href='mailto:sduracoska@gmail.com'
+            href='mailto:sduracoska+portfolio@gmail.com'
             className='text-neutral-400 transition duration-300 hover:scale-110 hover:text-white'
             aria-label='Send Email'
           >
-            <Mail size={15} className='2xl:h-5 2xl:w-5' />
+            <Mail size={16} className='2xl:h-5 2xl:w-5' />
           </a>
 
           <a
@@ -40,7 +40,7 @@ export const Navbar = () => {
             className='text-neutral-400 transition duration-300 hover:scale-110 hover:text-white'
             aria-label='LinkedIn'
           >
-            <Linkedin size={15} className='2xl:h-5 2xl:w-5' />
+            <Linkedin size={16} className='2xl:h-5 2xl:w-5' />
           </a>
         </div>
       </div>

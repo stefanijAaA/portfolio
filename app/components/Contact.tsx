@@ -26,7 +26,7 @@ export const Contact = () => {
 
           <div className='grid gap-3 2xl:gap-4'>
             <a
-              href='mailto:sduracoska@gmail.com'
+              href='mailto:sduracoska+portfolio@gmail.com'
               className='group cursor-pointer rounded-xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-white/10 2xl:rounded-2xl 2xl:p-5'
             >
               <div className='flex items-center gap-3'>
@@ -36,7 +36,7 @@ export const Contact = () => {
                     Email
                   </p>
                   <p className='text-sm text-white group-hover:text-violet-200 2xl:text-base'>
-                    sduracoska@gmail.com
+                    sduracoska+portfolio@gmail.com
                   </p>
                 </div>
               </div>
