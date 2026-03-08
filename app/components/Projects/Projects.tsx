@@ -15,7 +15,7 @@ export const Projects = () => {
               Things I&apos;ve worked on
             </h2>
 
-            <p className='mt-4 text-sm leading-7 text-neutral-400 2xl:text-lg 2xl:leading-8'>
+            <p className='mt-4 text-sm leading-6 text-neutral-400 2xl:text-lg 2xl:leading-8'>
               A curated selection of products and systems I&apos;ve contributed
               to across frontend, full-stack and platform-focused work.
             </p>

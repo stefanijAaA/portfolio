@@ -1,13 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { techStack } from '../utils/techStack';
-
-const activeTabStyles =
-  'border-white/15 bg-white/8 text-white shadow-[0_8px_30px_rgba(0,0,0,0.18)]';
-
-const badgeAccent =
-  'hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.04)_100%)] hover:text-white hover:shadow-[0_14px_30px_rgba(0,0,0,0.30),0_0_20px_rgba(139,92,246,0.10)]';
+import { activeTabStyles, badgeAccent } from './utils/constants';
+import { techIcons } from './utils/techIcons';
+import { techStack } from './utils/techStack';
 
 export const Skills = () => {
   const [activeKey, setActiveKey] =
@@ -30,7 +26,7 @@ export const Skills = () => {
             Skills & tools
           </h2>
 
-          <p className='mt-4 max-w-xl text-sm leading-7 text-neutral-400 2xl:mt-5 2xl:max-w-2xl 2xl:text-lg 2xl:leading-8'>
+          <p className='mt-4 max-w-xl text-sm leading-6 text-neutral-400 2xl:mt-5 2xl:max-w-2xl 2xl:text-lg 2xl:leading-8'>
             A quick look at the technologies I work with most.
           </p>
         </div>
@@ -70,12 +66,15 @@ export const Skills = () => {
               </p>
             </div>
 
-            <div className='flex flex-wrap gap-3 2xl:gap-4'>
+            <div className='flex flex-wrap gap-2.5 2xl:gap-3'>
               {activeGroup.items.map((item) => (
                 <span
                   key={`${activeGroup.key}-${item}`}
-                  className={`rounded-xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.02)_100%)] px-4 py-3 text-sm font-medium text-white transition-all duration-300 sm:px-5 2xl:rounded-2xl 2xl:px-7 2xl:py-4 2xl:text-lg ${badgeAccent}`}
+                  className={`flex items-center gap-1.5 whitespace-nowrap rounded-xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.02)_100%)] px-3 py-2.5 text-xs font-medium text-white transition-all duration-300 sm:px-4 2xl:gap-2 2xl:rounded-2xl 2xl:px-7 2xl:py-4 2xl:text-lg ${badgeAccent}`}
                 >
+                  <span className='text-sm opacity-80 2xl:text-base'>
+                    {techIcons[item]}
+                  </span>
                   {item}
                 </span>
               ))}

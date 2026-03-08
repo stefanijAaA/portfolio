@@ -38,7 +38,7 @@ export const Experience = () => {
               {experience.location}
             </p>
 
-            <ul className='mt-6 space-y-4 text-base leading-7 text-neutral-300 2xl:mt-8 2xl:space-y-5 2xl:text-2xl 2xl:leading-9'>
+            <ul className='mt-6 space-y-4 text-sm leading-6 text-neutral-300 2xl:mt-8 2xl:space-y-5 2xl:text-xl 2xl:leading-9'>
               {experience.highlights.map((item) => (
                 <li key={item} className='flex gap-3 2xl:gap-4'>
                   <span className='mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-300 2xl:mt-3 2xl:h-2 2xl:w-2' />

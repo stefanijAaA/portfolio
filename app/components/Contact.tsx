@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Phone } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 export const Contact = () => {
   return (
@@ -14,7 +14,7 @@ export const Contact = () => {
               Let&apos;s work together
             </h2>
 
-            <p className='mt-5 max-w-md text-sm leading-7 text-neutral-300 sm:text-base 2xl:mt-6 2xl:max-w-lg 2xl:text-lg 2xl:leading-8'>
+            <p className='mt-5 max-w-md text-xs leading-6 text-neutral-300 sm:text-sm 2xl:mt-6 2xl:max-w-lg 2xl:text-lg 2xl:leading-8'>
               If you&apos;re hiring, building something interesting, or just
               want to talk about tech, I&apos;d love to hear from you.
             </p>
@@ -75,23 +75,6 @@ export const Contact = () => {
                   </p>
                   <p className='text-sm text-white group-hover:text-violet-200 2xl:text-base'>
                     github.com/stefanija
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <a
-              href='tel:+38978810920'
-              className='group cursor-pointer rounded-xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/30 hover:bg-white/10 2xl:rounded-2xl 2xl:p-5'
-            >
-              <div className='flex items-center gap-3'>
-                <Phone className='text-violet-300' size={18} />
-                <div>
-                  <p className='text-xs uppercase tracking-[0.18em] text-neutral-500 2xl:text-sm 2xl:tracking-[0.2em]'>
-                    Phone
-                  </p>
-                  <p className='text-sm text-white group-hover:text-violet-200 2xl:text-base'>
-                    +389 78 810 920
                   </p>
                 </div>
               </div>
