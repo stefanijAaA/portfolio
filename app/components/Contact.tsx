@@ -17,7 +17,7 @@ export const Contact = () => {
               Let&apos;s work together
             </h2>
 
-            <p className='mt-5 max-w-md text-xs leading-6 text-neutral-300 sm:text-sm 2xl:mt-6 2xl:max-w-lg 2xl:text-lg 2xl:leading-8'>
+            <p className='mt-5 max-w-md text-sm leading-6 text-neutral-300 sm:text-sm 2xl:mt-6 2xl:max-w-lg 2xl:text-lg 2xl:leading-8'>
               If you&apos;re hiring, building something interesting, or just
               want to talk about tech, I&apos;d love to hear from you.
             </p>
