@@ -1,13 +1,33 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { TechPillsProps } from './types';
 
 export const TechPills: FC<TechPillsProps> = ({ visibleTech, hiddenTech }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('touchstart', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('touchstart', handleOutsideClick);
+    };
+  }, []);
 
   return (
-    <div className='flex items-center gap-2.5 2xl:gap-3'>
+    <div ref={containerRef} className='flex items-center gap-2.5 2xl:gap-3'>
       {visibleTech.map((tech) => (
         <span
           key={tech}
