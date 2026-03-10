@@ -39,7 +39,7 @@ export const Contact = () => {
                     Email
                   </p>
                   <p className='text-sm text-white group-hover:text-violet-200 2xl:text-base'>
-                    sduracoska+portfolio@gmail.com
+                    sduracoska@gmail.com
                   </p>
                 </div>
               </div>

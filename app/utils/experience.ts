@@ -25,9 +25,9 @@ export const experience = [
     period: 'Sep 2022 - Sep 2023',
     location: 'Remote',
     highlights: [
-      'Developed full-stack features for an online marketplace platform enabling local farmers and vendors to list and sell food products.',
-      'Built frontend interfaces using React and implemented backend functionality using Node.js.',
-      'Designed and integrated APIs for product listings, ordering and user management.',
+      'Developed key features for an online marketplace platform that enabled local farmers and vendors to list and sell food products.',
+      'Built user-facing interfaces and backend services to support product management, ordering workflows, and user accounts.',
+      'Designed and integrated the platform’s core services for product listings, order processing, and account management.',
     ],
     stack: ['React', 'Node.js', 'JavaScript', 'REST APIs'],
   },
