@@ -1,14 +1,37 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { navItems } from '../utils';
 import { Mail, Linkedin, Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navbarRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('touchstart', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('touchstart', handleOutsideClick);
+    };
+  }, []);
 
   return (
-    <header className='sticky top-0 z-50 w-full border-b border-white/10 bg-[#020617]/80 backdrop-blur-xl'>
+    <header
+      ref={navbarRef}
+      className='sticky top-0 z-50 w-full border-b border-white/10 bg-[#020617]/80 backdrop-blur-xl'
+    >
       <div className='flex w-full items-center px-5 py-3 md:px-10 2xl:gap-12 2xl:px-24 2xl:py-5'>
         <a
           href='#home'
